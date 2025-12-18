@@ -6,6 +6,7 @@
 - 5000 images for malignant  
 - 512 × 512 images, jpg  
 - high variance, seems work-able though  
+https://www.kaggle.com/datasets/obulisainaren/multi-cancer
 
 this may be the best choice, because  
 it will perform well with a well-trained CNN  
@@ -32,6 +33,7 @@ it will perform well with a well-trained CNN
 - 512 × 512 images, jpg  
 - lots of blurry, dirty, artifact rich samples  
 - i estimate this would train a poorly performing model  
+  https://www.kaggle.com/datasets/obulisainaren/multi-cancer
 
 > **Primary task**  
 > • Multi-class classification: benign / early / pre / progressed  
@@ -53,6 +55,9 @@ it will perform well with a well-trained CNN
 - ~2500 images for Myeloblast  
 - 256 × 256 png images, they exist in 1200 × 1200  
 - high variance  
+https://www.kaggle.com/datasets/rashasalim/blood-smear-images-for-aml-diagnosis
+https://www.cancerimagingarchive.net/collection/aml-cytomorphology_lmu/
+(There are a few versions of this data set floating around, I have several.)
 
 i estimate that it would be able to classify images  
 from this data set. for example, if I split the data  
@@ -78,6 +83,7 @@ YOLO style on a random sample from outside the data set”
 - 978 images with EKG reading and CSV file  
 - images are 2200 × 1700 png  
 - CSV have many readings for I, II, and III  
+  https://www.kaggle.com/competitions/physionet-ecg-image-digitization/data
 
 extremely well formatted, pre-processed data  
 all the images line up, all the same markers in same places  
@@ -119,13 +125,15 @@ converting the pixels into signal should be straight forward
 > • Line overlap and lead crossing ambiguity  
 > • Non-continuous signal leading to categorical errors  
 
+
 ---
 
-## ⚡️ Set 5 – bone marrow (9800 samples)
+## ⚡️ Set 5 – bone marrow (9800 samples, 171,000 samples)
 
 - 1000 of each type for training for BLA, EOS, LYT, MON, NGS, NIF, PMO  
 - 200 of each type for testing for BLA, EOS, LYT, MON, NGS, NIF, PMO  
 - 200 of each type for validation for BLA, EOS, LYT, MON, NGS, NIF, PMO  
+- another data set with 171,000 samples exists too, which I also have.
 
 there are some dupes and what looks like portions of sequences  
 radical variation in the data set  
@@ -138,6 +146,7 @@ radical variation in the data set
 - NGS = Neutrophilic granulocytes (segmented)  
 - NIF = Neutrophilic immature forms  
 - PMO = Promonocytes  
+  https://www.kaggle.com/datasets/shuvokumarbasakbd/bone-marrow-cell-colorized-classification/data
 
 According to online knowledge, “bone marrow datasets are brutal,”  
 so I expect this is going to perform poorly.  
