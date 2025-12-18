@@ -1,6 +1,6 @@
 # ⚡️ Data ⚡️
 
-## ⚡️ Set 1 – breast cancer
+## ⚡️ Set 1 – breast cancer (10k samples)
 
 - 5000 images for benign  
 - 5000 images for malignant  
@@ -23,7 +23,7 @@ it will perform well with a well-trained CNN
 
 ---
 
-## ⚡️ Set 2 – leukemia
+## ⚡️ Set 2 – leukemia (20k samples)
 
 - 5000 images for benign  
 - 5000 images for early  
@@ -46,7 +46,7 @@ it will perform well with a well-trained CNN
 
 ---
 
-## ⚡️ Set 3 – blood cells
+## ⚡️ Set 3 – blood cells (16k samples)
 
 - ~2500 images for Lymphoblast  
 - ~3000 images for Lymphocyte  
@@ -73,9 +73,9 @@ YOLO style on a random sample from outside the data set”
 
 ---
 
-## ⚡️ Set 4 – electro-cardiograms
+## ⚡️ Set 4 – electro-cardiograms (> 250 data points each, 244500 "samples")
 
-- 978 samples with EKG reading and CSV file  
+- 978 images with EKG reading and CSV file  
 - images are 2200 × 1700 png  
 - CSV have many readings for I, II, and III  
 
@@ -121,7 +121,7 @@ converting the pixels into signal should be straight forward
 
 ---
 
-## ⚡️ Set 5 – bone marrow
+## ⚡️ Set 5 – bone marrow (9800 samples)
 
 - 1000 of each type for training for BLA, EOS, LYT, MON, NGS, NIF, PMO  
 - 200 of each type for testing for BLA, EOS, LYT, MON, NGS, NIF, PMO  
@@ -152,3 +152,30 @@ so I expect this is going to perform poorly.
 > **Expected failure modes**  
 > • Irreducible label noise from expert disagreement  
 > • Confusion between morphologically similar immature cells (PMO, NIF, BLA)  
+
+---
+
+## ⚡️ Set 6 – synthetic high signal virus (250k samples)
+
+- Synthetic RGB circle-based images generated programmatically  
+- Explicit 1–1 mapping between image content and labels  
+- No label noise, no annotation ambiguity  
+- Fully controllable distributions (size, color, position, overlap)  
+- Original dataset is **not COCO format**; the new version is exported in **COCO format**  
+- Dataset generated using **CircleFarmer**  
+  https://github.com/nraptis/CircleFarmer  
+
+this data set exists to remove uncertainty from the learning problem  
+and isolate model behavior under ideal supervision conditions  
+
+> **Primary task**  
+> • Multi-class image classification with exact ground truth  
+>
+> **Secondary tasks**  
+> • Controlled generalization testing (distribution shifts)  
+> • Representation learning under perfect supervision  
+>
+> **Expected failure modes**  
+> • Overfitting to trivial geometric or color cues  
+> • Poor transfer to real-world, noisy medical imagery  
+
